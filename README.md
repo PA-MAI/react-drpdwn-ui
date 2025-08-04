@@ -1,48 +1,151 @@
-# Project #14 OCR- Build a Library for any project in react
+# Project #14 OCR — Build a Library for Any React Project
 
--Name: react-drpdwn-ui
--version: 1.0.1
--Autor:PA-MAI
+- **Name**: `react-drpdwn-ui`  
+- **Version**: `1.0.2`  
+- **Author**: Pa-Mai
 
-## Install library
+---
+
+## Technologies
+
+- JavaScript
+- CSS
+- React
+
+---
+
+## Install the library
 
 ```bash
 npm install react-drpdwn-ui
 ```
 
+---
+
 ## Sample configuration
 
-1-import the library in your React project page:
+### 1 - Import the library in your React component
 
-- `import { Dropdown } from 'react-drpdwn-ui';`
+```js
+import { Dropdown } from 'react-drpdwn-ui';
+```
 
-2-import data in your React project page
+---
 
-For your own custom data (internal src/data/xxxx.js):
+### 2 - Import your own data (from `src/data/xxxx.js`)
 
-- `import xxxx from "../../data/xxxx";`
+```js
+import xxxx from "../../data/xxxx";
+```
 
-3-Set datas for states or/and departements in your variable:
+---
 
-- `const statesOptions = states.map((s) => ({ label: s.name, value: s.abbreviation }));`
-- `const departmentOptions = departements.map((d) => ({ label: d, value: d }));`
+### 3 - Set data for `states` or `departments` in your variables
 
-4-Use the dropdown in your return:
+#### States example
 
--`<Dropdown
-    id="state"
-    label="State"
-    value={formData.state}
-    options={statesOptions}
-    onChange={handleChange}
-    />`
+```js
+export const states = [
+  { name: "Alabama", abbreviation: "AL" },
+  { name: "Alaska", abbreviation: "AK" },
+  // ...
+];
 
-or/and
+const statesOptions = states.map((state) => ({
+  value: state.abbreviation, // "AL"
+  label: state.name,         // "Alabama"
+}));
+```
 
--`<Dropdown
-    id="department"
-    label="Department"
-    value={formData.department}
-    options={departmentOptions}
-    onChange={handleChange}
-    />`
+#### Departments example
+
+```js
+export const departments = [
+  "Sales",
+  "Marketing",
+  "Engineering",
+  "Human Resources",
+  "Legal",
+];
+
+const departmentOptions = departments.map((d) => ({
+  value: d,
+  label: d,
+}));
+```
+
+---
+
+### 4 - Use the `<Dropdown />` component in your JSX
+
+```jsx
+<Dropdown
+  id="state"
+  label="State"
+  value={formData.state}
+  options={statesOptions}
+  onChange={handleChange}
+/>
+
+<Dropdown
+  id="department"
+  label="Department"
+  value={formData.department}
+  options={departmentOptions}
+  onChange={handleChange}
+/>
+```
+
+---
+
+## 📘 `<Dropdown />` Component API
+
+The `Dropdown` component is a reusable input for selecting an option from a list.
+
+### Props
+
+| Prop        | Type                                     | Required | Description                                                                 |
+|-------------|------------------------------------------|----------|-----------------------------------------------------------------------------|
+| `id`        | `string`                                 | ✅       | A unique identifier for the input.                                          |
+| `label`     | `string`                                 | ✅       | The text displayed above the dropdown.                                      |
+| `value`     | `string`                                 | ✅       | The currently selected value.                                               |
+| `options`   | `Array<{ value: string, label: string }>`| ✅       | The list of available options.                                              |
+| `onChange`  | `(event: React.ChangeEvent) => void`     | ✅       | Callback function triggered when the selection changes.                     |
+
+---
+
+### Example usage
+
+```jsx
+<Dropdown
+  id="department"
+  label="Department"
+  value={formData.department}
+  options={departmentOptions}
+  onChange={handleChange}
+/>
+```
+
+---
+
+### Example `options` structure
+
+```js
+[
+  { value: "AL", label: "Alabama" },
+  { value: "AK", label: "Alaska" },
+  // ...
+]
+```
+
+---
+
+## License
+
+no License
+
+---
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.

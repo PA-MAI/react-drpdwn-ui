@@ -1,10 +1,13 @@
 {
   "name": "react-drpdwn-ui",
   "private": false,
-  "description": "A simple dropdown for states and departement ui library for React",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "description": "A simple and reusable dropdown UI component for selecting states or departments in React applications.",
+  "author": "PA-MAI",
+  "license": "UNLICENSED",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "exports": {
     ".": {
@@ -14,6 +17,28 @@
     },
     "./styles": "./dist/style.css"
   },
+  "keywords": [
+    "dropdown",
+    "react",
+    "ui",
+    "react-component",
+    "select",
+    "states",
+    "departments",
+    "form",
+    "form-input",
+    "dropdown-component",
+    "react-ui-library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PA-Mai/react-drpdwn-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/PA-MAI/react-drpdwn-ui/issues"
+  },
+  "homepage": "https://github.com/PA-MAI/react-drpdwn-ui#readme",
+
   "files": [
     "/dist"
   ],

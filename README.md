@@ -1,8 +1,14 @@
 # Project #14 OCR — Build a Library for Any React Project
 
 - **Name**: `react-drpdwn-ui`  
-- **Version**: `1.0.2`  
+- **Version**: `1.0.4`  
 - **Author**: Pa-Mai
+
+---
+
+## Contents
+
+This documentation highlights the most important elements to **install** and to **configure** your app.
 
 ---
 
@@ -106,11 +112,11 @@ The `Dropdown` component is a reusable input for selecting an option from a list
 
 | Prop        | Type                                     | Required | Description                                                                 |
 |-------------|------------------------------------------|----------|-----------------------------------------------------------------------------|
-| `id`        | `string`                                 | ✅       | A unique identifier for the input.                                          |
-| `label`     | `string`                                 | ✅       | The text displayed above the dropdown.                                      |
-| `value`     | `string`                                 | ✅       | The currently selected value.                                               |
-| `options`   | `Array<{ value: string, label: string }>`| ✅       | The list of available options.                                              |
-| `onChange`  | `(event: React.ChangeEvent) => void`     | ✅       | Callback function triggered when the selection changes.                     |
+| `id`        | `string`                                 | true     | A unique identifier for the input.                                          |
+| `label`     | `string`                                 | true     | The text displayed above the dropdown.                                      |
+| `value`     | `string`                                 | true     | The currently selected value.                                               |
+| `options`   | `Array<{ value: string, label: string }>`| true     | The list of available options.                                              |
+| `onChange`  | `(event: React.ChangeEvent) => void`     | true     | Callback function triggered when the selection changes.                     |
 
 ---
 
@@ -146,6 +152,6 @@ no License
 
 ---
 
-## Contributing
+## Contribute to the project
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+react-drpdwn-ui is an OpenClassRooms project of react training. Feel free to fork the source and contribute with your own features.

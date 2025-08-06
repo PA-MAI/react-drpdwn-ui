@@ -1,7 +1,7 @@
 {
   "name": "react-drpdwn-ui",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A simple and reusable dropdown UI component for selecting states or departments in React applications.",
   "author": "PA-MAI",
   "license": "UNLICENSED",

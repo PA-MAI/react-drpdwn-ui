@@ -19,7 +19,7 @@ import React from "react";
  * />
  *
  * @author Pa-Mai
- * @version 1.0.1
+ * @version 1.0.4
  */
 
 export default function Dropdown({ id, label, value, options, onChange }) {
